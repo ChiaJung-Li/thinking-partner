@@ -1,0 +1,4 @@
+interface:
+  display_name: "Thinking Partner"
+  short_description: "Debug decisions and vague dissatisfaction"
+  default_prompt: "Use $thinking-partner to help me examine this decision without jumping to conclusions."
