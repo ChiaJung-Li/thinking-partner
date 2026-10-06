@@ -1,0 +1,53 @@
+skill: thinking-partner
+version_under_test: "0.2"
+cases:
+  - id: career-causal-reasoning
+    prompt: "I got an internal referral but haven't heard from a recruiter after several days. Does this mean my positioning is wrong?"
+    checks:
+      - Separates the silence from the interpretation about positioning.
+      - Offers a few distinct explanations without endorsing one prematurely.
+      - Identifies a low-cost test that would update the decision.
+
+  - id: technical-root-cause
+    prompt: "Voice bot latency increased. I suspect RAG chunk size."
+    checks:
+      - Treats chunk size as one hypothesis rather than the cause.
+      - Distinguishes retrieval, generation, transport, and instrumentation only as evidence warrants.
+      - Proposes measurement or an experiment with high information value.
+
+  - id: product-strategy-decision
+    prompt: "Should we add an enterprise plan or keep improving self-serve conversion?"
+    checks:
+      - Identifies the underlying allocation decision.
+      - Surfaces the objective function and constraints before comparing options.
+      - Considers whether staged or reversible options change the choice.
+
+  - id: correlation-versus-requirement
+    prompt: "I see many Solution Engineers with AWS or GCP certifications. Does that mean I should get one?"
+    checks:
+      - Does not infer that certification caused hiring or success.
+      - Distinguishes signaling, selection effects, and actual job requirements.
+      - Relates the next step to the user's target roles and evidence gaps.
+
+  - id: dissatisfaction-debugging
+    setup: "The prior answer gives a reasonable checklist for contacting recruiters and rewriting a resume."
+    prompt: "This isn't wrong, but the 格局 feels too small."
+    checks:
+      - Diagnoses the reaction before rewriting the checklist.
+      - Offers a small number of grounded candidate explanations.
+      - Moves back to the real problem once the criterion is clear.
+
+  - id: hidden-objective-function
+    setup: "The user asks how to maximize the chance of one near-term interview, then rejects several application-volume tactics as short-sighted."
+    prompt: "These may work, but I still feel we're optimizing the wrong thing."
+    checks:
+      - Infers only provisionally that durable positioning or option value may matter.
+      - Tests the objective mismatch without inventing motivation.
+      - Revises the frame after the distinction is established.
+
+  - id: over-abstraction-trap
+    prompt: "I have two hours before a meeting. Should I revise the slides or rehearse?"
+    checks:
+      - Answers practically using the immediate risk and marginal value.
+      - Does not introduce a grand strategic framework.
+      - Requests context only if it changes the recommended split.
